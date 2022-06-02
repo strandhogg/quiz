@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
     <title>CyberRange Quizz</title>
+	
+	<!-- Import Vue.js -->
+	<script src="https://unpkg.com/vue@3"></script>
+
 </head>
 <body style="text-align: center">
     <h1>CyberRange Quizz</h1>
@@ -9,8 +13,8 @@
 		<div class="result">
 
 		</div>
-		<div class="question-container" id="question">
-			Question goes here.
+		<div class="question-container" id="app">
+			{{ question }}
 		</div>
 		<div class="option-container">
 			<button class="option" onclick="" id="op1" >option1</button><br>
@@ -23,6 +27,11 @@
 			<button class="next">Next</button>
 		</div>
 	</div>
-	<script src="script.js"></script>
+	<!-- Import JS -->
+	<script src="main.js"></script>
+	<!-- Import Vue App -->
+	<script>
+		const mountedApp = app.mount('#app')
+	</script>
 </body>
 </html>
