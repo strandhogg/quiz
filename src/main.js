@@ -1,16 +1,21 @@
 const app = Vue.createApp({
-    data() {
-        return {
-            question: [
-                "Have you worked with a terminal/shell before?",
-                "Have you worked with linux before?",
-                "Have you worked with a SIEM system before?",
-                "Have you heard about IR before?",
-                "Have you attended a CR/CTF before?",
-                "What is an IP address?",
-                "What is a MAC address?",
-                ""
-            ]
+    data: [{
+        category: 'Pre-Knowledge Assesement',
+        question: 'What is an IP adress?',
+        solution: 'The network address of a device',
+        falses: ['The hardware address of a device', 'The domain name of a service', 'The address for telephonic transmission of scanned printed material'],
+        }, {
+        category: 'Pre-Knowledge Assesement',
+        question: 'What is a MAC address?',
+        solution: 'The hardware address of a device',
+        falses: ['The network address of a device', 'The domain name of a service', 'The unique address of subscriber identity modules (SIM)'],
+        }],
+        
+    methods: {
+        advanceToQuiz(){
+            // Irgendwie auf Quiz kommen
         }
     }
+    
+    
 })

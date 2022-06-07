@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
+	<link href="styles.css" rel="stylesheet">
+	<script defer src="main.js"></script>
+
+<!-- Import Vue.js -->
+<script src="https://unpkg.com/vue@3"></script>
+
+
 <head>
-    <title>CyberRange Quizz</title>
+
+    <title>CyberRange Quiz</title>
 	
-	<!-- Import Vue.js -->
-	<script src="https://unpkg.com/vue@3"></script>
-
 </head>
-<body style="text-align: center">
-    <h1>CyberRange Quizz</h1>
-	<div class="panel">
-		<div class="result">
+<body>
 
+	<!-- Startbildschirm -->
+	
+	<div class="main-block" id="startScreen" hidden> 
+		<h1 class="text">Welcome to Cyber Range Quiz!</h1>
+		<p class="text text_regular"> <button class="yellow-block button text text_regular" v-on:click="advanceToQuiz">Click here to start the Quiz!</button></p>
+	  </div>
+
+	<!-- Quiz -->
+	<img src="http://cyberrange.ur.de/img/iceberg.bebef095.png" height="100" width="100">
+    <h1>CyberRange Quiz</h1>
+	<div class="panel">
+		<div class="question-container" class= "hide">
+			<div id="question">Question</div>
+			<div id="answer-buttons" class="btn-grid">
+				<button class="op_btn" id="op1" >Answer 1</button><br>
+				<button class="op_btn" id="op2" >Answer 2</button><br>
+				<button class="op_btn" id="op3" >Answer 3</button><br>
+				<button class="op_btn" id="op4" >Answer 4</button><br>
 		</div>
-		<div class="question-container" id="app">
-			{{ question }}
-		</div>
-		<div class="option-container">
-			<button class="option" onclick="" id="op1" >option1</button><br>
-			<button class="option" id="op2" >option2</button><br>
-			<button class="option" id="op3">option3</button><br>
-			<button class="option" id="op4" style="BACKGROUND-COLOR: rgb(236, 236, 110);">option4</button><br>
-		</div>
+		
 		<div class="navigation">
-			<button class="evaluate">Evaluate</button>
-			<button class="next">Next</button>
+			<button id="evaluate-btn" class="evaluate-btn btn">Evaluate</button>
+			<button id="next-btn" class="next-btn btn">Next</button>
 		</div>
 	</div>
+
+	<!-- Endbildschirm -->
+	
+
+
 	<!-- Import JS -->
 	<script src="main.js"></script>
 	<!-- Import Vue App -->
