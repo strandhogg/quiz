@@ -3,6 +3,9 @@
 
 	<link href="styles.css" rel="stylesheet">
 	<script defer src="main.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <!-- Import Vue.js -->
 <script src="https://unpkg.com/vue@3"></script>
@@ -17,15 +20,15 @@
 
 	<!-- Startbildschirm -->
 	
-	<div class="main-block" id="startScreen" hidden> 
+	<div class="startScreen" > 
 		<h1 class="text">Welcome to Cyber Range Quiz!</h1>
-		<p class="text text_regular"> <button class="yellow-block button text text_regular" v-on:click="advanceToQuiz">Click here to start the Quiz!</button></p>
+		<button class="start-btn btn" id="start-btn">Click here to start the Quiz!</button></p>
 	  </div>
 
 	<!-- Quiz -->
 	<img src="http://cyberrange.ur.de/img/iceberg.bebef095.png" height="100" width="100">
     <h1>CyberRange Quiz</h1>
-	<div class="panel">
+	<div class="panel" hidden>
 		<div class="question-container" class= "hide">
 			<div id="question">Question</div>
 			<div id="answer-buttons" class="btn-grid">
