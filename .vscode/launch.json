@@ -5,11 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Edge",
+            "type": "pwa-chrome",
             "request": "launch",
-            "type": "msedge",
-            "url": "file:///C:/Users/Matthias/Documents/quiz/src/index.html",
+            "name": "Launch Chrome against localhost",
+            "url": "file:///Users/maxisteinhauer/Projektseminar/CyberRange/Quiz!!!/quiz/src/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
 }
+

@@ -6,7 +6,7 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 
 let shuffledQuestions, currentQuestionIndex
 
-startButton.addEventListener('click', startGame)
+//startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
@@ -15,12 +15,14 @@ nextButton.addEventListener('click', () => {
 function startGame(){
     document.getElementById('p1').style.display = "block"; //unnecessary when line 7 works
     document.getElementById('start-btn').style.display = "none"; // -"-
-    document.getElementById('start-btn').style.display = 
+    document.getElementsByClassName('startScreen')[0].style.display = "none"
     console.log('Started')
     startButton.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .25)
     currentQuestionIndex = 0
-    questionContainerElement.classList.remove('hide')
+    //document.getElementById('panel').style.display = null
+    //questionContainerElement.classList.remove('hide')
+    //console.log(questions)
     setNextQuestion()
 
 }
@@ -44,6 +46,7 @@ function showQuestion(question){
     })
 }
 
+//TO-DO: Comment
 function resetState(){
     nextButton.classList.add('hide')
     while (answerButtonsElement.firstChild){
@@ -78,9 +81,18 @@ function clearStatusClass(element){
     element.classList.remove('wrong')
 }
 
-const questions = [
+questions = [
     {
         question: 'What is this?',
+        answers: [
+            { text: 'a quiz', correct: true},
+            { text: 'a car', correct: false},
+            { text: 'a tree', correct: false},
+            { text: 'a puzzle', correct: false}
+        ]
+    },
+    {
+        question: 'Next',
         answers: [
             { text: 'a quiz', correct: true},
             { text: 'a car', correct: false},
