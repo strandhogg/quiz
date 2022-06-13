@@ -6,11 +6,8 @@ let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
 
-function show_panel(){
-    document.getElementById('p1').style.display = "block";
-}
-
 function startGame(){
+    document.getElementById('p1').style.display = "block";
     console.log('Started')
     startButton.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .25)
