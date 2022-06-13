@@ -24,14 +24,14 @@
 	<!-- Startbildschirm -->
 	
 	<div class="startScreen" > 
-		<h1 class="text">Welcome to Cyber Range Quiz! </h1>
-		<button class="start-btn btn" id="start-btn">Click here to start the Quiz!</button></p>
+		<h1 class="text">Welcome to Cyber Range Quiz!</h1>
+		<button onclick="startGame()" class="start-btn btn" id="start-btn">Click here to start the Quiz!</button></p>
 	  </div>
 
 	<!-- Quiz -->
 	<img src="http://cyberrange.ur.de/img/iceberg.bebef095.png" height="100" width="100">
     <h1>CyberRange Quiz</h1>
-	<div class="panel" hidden>
+	<div class="panel" id="p1" style="display:none">
 		<div class="question-container" class= "hide">
 			<div id="question">Question</div>
 			<div id="answer-buttons" class="btn-grid">

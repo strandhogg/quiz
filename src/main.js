@@ -13,6 +13,9 @@ nextButton.addEventListener('click', () => {
 })
 
 function startGame(){
+    document.getElementById('p1').style.display = "block"; //unnecessary when line 7 works
+    document.getElementById('start-btn').style.display = "none"; // -"-
+    document.getElementById('start-btn').style.display = 
     console.log('Started')
     startButton.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .25)
