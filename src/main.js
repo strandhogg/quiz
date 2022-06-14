@@ -92,12 +92,12 @@ questions = [
         ]
     },
     {
-        question: 'Next',
+        question: 'What is yellow?',
         answers: [
-            { text: 'a quiz', correct: true},
-            { text: 'a car', correct: false},
-            { text: 'a tree', correct: false},
-            { text: 'a puzzle', correct: false}
+            { text: 'sun', correct: true},
+            { text: 'elephant', correct: false},
+            { text: 'sea', correct: false},
+            { text: 'plants', correct: false}
         ]
     }
 ]
