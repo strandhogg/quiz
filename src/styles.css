@@ -22,11 +22,34 @@
 }
 
 #op1{
-    border-color: #ff7f82;
+    border-color: #c23c3e;
     background-color: #2e0d6b;
 }
 #op1:hover, #op1:focus{
-    box-shadow: inset 0 0 0 2em #ff7f82;
+    box-shadow: inset 0 0 0 2em #c23c3e;
 }
 
+#op2{
+  border-color: #2bd266;
+  background-color: #2e0d6b;
+}
+#op2:hover, #op2:focus{
+  box-shadow: inset 0 0 0 2em #2bd266;
+}
+
+#op3{
+  border-color: #3d3dcc;
+  background-color: #2e0d6b;
+}
+#op3:hover, #op3:focus{
+  box-shadow: inset 0 0 0 2em #3d3dcc;
+}
+
+#op4{
+  border-color: #e7de5e;
+  background-color: #2e0d6b;
+}
+#op4:hover, #op4:focus{
+  box-shadow: inset 0 0 0 2em #e7de5e;
+}
 
