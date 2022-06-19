@@ -1,59 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	
+
 <!-- Import Vue.js -->
 <script src="https://unpkg.com/vue@3"></script>
 
 
 <head>
-
-	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width-device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="styles.css" rel="stylesheet">
 	<script defer src="main.js"></script>
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-    <title>CyberRange Quiz</title>
-	
+	<title>CyberRange Quiz</title>
+
 </head>
 
 <body>
 
 	<!-- Startbildschirm -->
-	
-	<div class="startScreen" > 
-		<h1 class="text" >Welcome to Cyber Range Quiz!</h1>
-		<button onclick="startGame()" class="start-btn btn" id="start-btn">Click here to start the Quiz!</button></p>
-	  </div>
+	<div class="w-full" style="background-color: #2e0d6b; height:100vh">
 
-	<!-- Quiz -->
-    <h1>CyberRange Quiz</h1>
-	<div class="panel" id="p1" style="display:none">
-		<div class="question-container">
-			<div id="question" style = 'color: aliceblue;'>Question</div>
-			<div id="answer-buttons" class="btn-grid">
-				<button class="op_btn" id="op1" >Answer 1</button><br>
-				<button class="op_btn" id="op2" >Answer 2</button><br>
-				<button class="op_btn" id="op3" >Answer 3</button><br>
-				<button class="op_btn" id="op4" >Answer 4</button><br>
+	<div id="startScreen" class="startScreen text-white text-center py-5 px-5" style="display: block">
+		<h1 class="text">Welcome to Cyber Range Quiz!</h1> 
+		<div class="my-3">
+			<div class="input-group my-3">
+				<span class="input-group-text" id="basic-addon1">Username</span>
+				<input aria-label="Username" aria-describedby="basic-addon1" class="form-control" id="username" name="username" required type="text" placeholder="Gib hier deinen Username ein!" />
+			</div>
+			<button onclick="startGame()" class="btn btn-light my-3 w-100 raise" id="start-btn ">Click here to start the Quiz!</button>
 		</div>
 		
-		<div class="navigation">
-			<button id="evaluate-btn" class="evaluate-btn btn">Evaluate</button>
-			<button id="next-btn" class="next-btn btn">Next</button>
+	</div>
+
+	<!-- Quiz -->
+	<div id="quizScreen" class="text-white text-center py-5 px-5" style="display: none">
+		<h1>CyberRange Quiz</h1>
+		<hr/>
+		<div>
+			<p id="questionCounter"></p>
+		</div>
+		<div class="panel my-3" id="p1">
+			<div id="question-container" class="question-container">
+				<div id="question" style='color: aliceblue;' class="fs-2">Question</div>
+				<div id="answer-buttons" class="btn-grid">
+					<button class="op_btn" id="op1">Answer 1</button>
+					<button class="op_btn" id="op2">Answer 2</button>
+					<button class="op_btn" id="op3">Answer 3</button>
+					<button class="op_btn" id="op4">Answer 4</button>
+				</div>
+
+				<div class="navigation row">
+					<button id="evaluate-btn" class="btn btn-light my-3 w-100 raise col mr-5">Evaluate</button>
+					<button id="next-btn" class="btn btn-light my-3 w-100 raise col ml-5">Next</button>
+				</div>
+			</div>
 		</div>
 	</div>
 
-	<!-- Endbildschirm -->
-	
+		<!-- Endbildschirm -->
 
 
-	
-	<!-- Import Vue App -->
-	<script>
-		const mountedApp = app.mount('#app')
-	</script>
+
+
+		<!-- Import Vue App -->
+		<script>
+			const mountedApp = app.mount('#app')
+		</script>
 </body>
+
 </html>
