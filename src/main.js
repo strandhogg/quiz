@@ -258,7 +258,11 @@ function setNextQuestion(){
 }
 
 function showQuestion(question){
+    if(currentQuestionIndex <= 22){
     questionCounterElement.innerText = currentQuestionIndex+1+'.Question'
+}else{
+    endGame()
+}
     questionElement.innerText = question.question
     counter = 1;
     question.answers.forEach(answer => {
@@ -276,6 +280,7 @@ function showQuestion(question){
         button.addEventListener('click', selectAnswer)
         answerButtonsElement.appendChild(button)
         counter++
+      
     })
 }
 
@@ -312,3 +317,8 @@ function clearStatusClass(element){
     element.classList.remove('wrong')
 }
 
+function endGame(){
+    document.getElementById("quizScreen").style.display = 'none';
+    document.getElementById("endScreen").style.display = 'block';
+    
+}
